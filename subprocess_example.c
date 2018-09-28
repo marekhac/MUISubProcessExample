@@ -1,4 +1,4 @@
-/* compile with "gcc -noixemul -o helloworld_button helloworld_button.c" */
+/* compile with "gcc -noixemul -o subprocess_example subprocess_example.c" */
 
 #include <dos/dostags.h>
 #include <proto/muimaster.h>
