@@ -26,10 +26,10 @@ long BuildApplication (void)
 		MUIA_Application_Copyright, (ULONG)"MarX",
 		MUIA_Application_Title, (ULONG)"MUI",
 		SubWindow,
-            Win = WindowObject,
-                MUIA_Window_Title, (ULONG)"MUI Test",
-                WindowContents,
-                VGroup,
+			Win = WindowObject,
+				MUIA_Window_Title, (ULONG)"MUI Test",	
+				WindowContents,
+				VGroup,
 				
 					// GROUP : HEADER
 				
@@ -108,7 +108,7 @@ void childprocesscode(void)
 	{
     	Delay(100);
     	
-    	DoMethod (TextField, MUIM_SetAsString, MUIA_Text_Contents, "%ld", counter); 
+    	DoMethod (app, MUIM_Application_PushMethod, TextField, 4, MUIM_SetAsString, MUIA_Text_Contents, "%ld", counter);
 
     	printf("SubProcess Said: %d\n", counter);
     	counter++;	
